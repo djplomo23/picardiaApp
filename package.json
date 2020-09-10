@@ -23,10 +23,8 @@
   },
   "scripts": {
     "dev": "nodemon --watch backend --exec babel-node backend/server.js",
-    "start": "node backend/server.js",
-    "build": "npm run clean && npm run babel-build",
-    "babel-build": "babel -d ./frontend/build ./frontend/src -s",
-    "clean": "mkdir build"
+    "start": "node backend/server.js"
+    
   },
   "keywords": [],
   "author": "",
