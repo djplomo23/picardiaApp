@@ -1,10 +1,12 @@
+import dotenv from 'dotenv';
 
+dotenv.config();
 
-module.exports = {
-    PORT: process.env.PORT || 8000,
+export default {
+    PORT: process.env.PORT || 5000,
     MONGODB_URL: 'mongodb+srv://djplomo:Ariel2323@cluster0.vsj1c.mongodb.net/template?retryWrites=true&w=majority',
     JWT_SECRET: process.env.JWT_SECRET || 'somethingsecret',
-    
+
 
 };
 
