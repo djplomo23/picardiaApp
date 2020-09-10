@@ -1,6 +1,6 @@
-import express from 'express';
-import Product from '../models/productModel';
-import { isAdmin, isAuth } from '../util';
+const express = require ('express');
+const Product = require ('../models/productModel');
+const { isAdmin, isAuth } = require('../util');
 
 
 const router = express.Router();
@@ -12,6 +12,7 @@ return res.send(products)
 
 })
 
+
 router.get('/:id', async (req, res) => {
     const product = await Product.findOne({ _id: req.params.id });
     if (product) {
@@ -20,7 +21,6 @@ router.get('/:id', async (req, res) => {
       res.status(404).send({ message: 'Product Not Found.' });
     }
   });
-
 
 
 
@@ -76,4 +76,4 @@ router.delete('/:id', isAuth, isAdmin,  async (req, res) => {
 });
    
 
-export default router;
+module.exports = router;

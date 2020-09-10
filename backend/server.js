@@ -1,12 +1,20 @@
-import express from 'express';
-import path from 'path';
-import config from './config';
-import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
-import userRoute from './routes/userRoute';
-import productRoute from './routes/productRoute';
+const  dotenv = require ('dotenv');
+const express = require ('express');
+const path = require ('path');
+const config = require ('./config');
+const mongoose = require ('mongoose');
+const bodyParser = require ('body-parser');
+const userRoute = require ('./routes/userRoute');
+const productRoute = require ('./routes/productRoute');
 
 
+
+
+
+dotenv.config();
+
+
+const PORT = process.env.PORT || 5000;
 
 const mongodbUrl = config.MONGODB_URL;
 mongoose.connect(mongodbUrl, {
@@ -20,11 +28,15 @@ app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 
+
+
+
+
 if (process.env.NODE_ENV === 'production') {
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+  res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
 });
 }
-app.listen(config.PORT, () => {console.log('server started on port' + config.PORT)});
+app.listen(PORT, () => {console.log('server started on port' + PORT)});
