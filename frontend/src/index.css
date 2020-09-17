@@ -60,14 +60,17 @@ body::-webkit-scrollbar-track{
 }
 .offers{
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
+  margin: 0;
   width: 100%;
-  height: 52rem;
-  background-image: url('./img/Offer.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }
+.offers img{
+  max-width: 100rem;
+}
+
+
 
 .brand img{
   position: relative;
@@ -87,11 +90,11 @@ body::-webkit-scrollbar-track{
   font-weight: bold;
 }
 .header-links a:hover{
-  color: #ff8000;
+  color: #ff00bf;
 }
 .main{
   grid-area: main;
-  
+ 
 }
 .footer{
   grid-area: footer;
@@ -118,8 +121,9 @@ body::-webkit-scrollbar-track{
   width: 100%;
 }
 .productosDestacados{
+
+  flex-wrap: wrap;
   width: 100%;
-  height: 50rem;
   display: flex;
   justify-content: center;
   
@@ -131,7 +135,7 @@ body::-webkit-scrollbar-track{
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #7a7a7a;
+  background: #EFDECC;
   width: 100%;
   height: 50rem;
 }
@@ -215,13 +219,12 @@ body::-webkit-scrollbar-track{
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  background: rgba(116, 185, 255, 0.5);
-  display: flex;
+  background:#EFDECC;
   flex-wrap: wrap;
 
 }
 .superContainer{
-  padding:  5rem 0;
+  padding:  2rem 0;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -237,6 +240,7 @@ body::-webkit-scrollbar-track{
   transition: ease-in-out transform .4s;
 }
 .descrtionSuper{
+  display: flex;
   width: 50rem;
   padding: .5rem;
   transition: ease-in-out transform .4s;
@@ -304,11 +308,12 @@ body::-webkit-scrollbar-track{
 
 a{
 text-decoration: none;
+color: #000000;
 
 }
 
 a:hover{
-  color: #ff8000;
+  color: #ff00bf;
 }
 /*Home Screen */
 
@@ -327,6 +332,7 @@ a:hover{
   flex: 0 1 26rem;
   margin: 1rem;
   height: 40rem;
+  background: #ffffff;
   border: .1rem #c0c0c0c0 solid;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.105);
   -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.105);
@@ -643,6 +649,19 @@ tbody>tr:nth-child(odd){
     
   
   }
+  
+  .offers img{
+    max-width: 50rem;
+  }
+  .details-image {
+    display: flex;
+    justify-content: center;
+  }
+  .details-image img{
+    max-width: 30rem;
+    widows: 100%;
+  }
+  
   .callToActionEmail label{
     display: none;
   }

@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import rostro from '../img/rostro.jpg';
+import React from 'react';
+import HomeScreen from './HomeScreen';
 
 function productosDestacados(props) {
-    return <div className="productosDestacados">
+    return (
+    <div className="productosDestacados">
         <h2>Productos Destacados</h2>
+        
+        <HomeScreen/>
         
             
 
     </div>
-
+)
 }
 
 

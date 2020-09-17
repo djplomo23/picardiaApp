@@ -17,7 +17,12 @@ import RegisterScreen from './screen/RegisterScreen';
 import reviewScreen from './screen/ReviewScreen';
 import productosDestacados from './screen/DestacadoProductScreen';
 import ProductsScreen from './screen/ProductsScreen';
+import Axios from 'axios';
 
+const api = Axios.create({
+    baseURL: "https://picabackenlisto.herokuapp.com"
+
+})
 
 
 function App() {
