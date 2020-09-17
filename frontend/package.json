@@ -1,6 +1,7 @@
 {
   "name": "frontend",
-  "proxy": "https://picabackenlisto.herokuapp.com",
+  "homepage": "https://djplomo23.github.io/picardiaApp",
+  "proxy": "https://picabackenlisto.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
