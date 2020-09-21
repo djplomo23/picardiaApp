@@ -17,12 +17,10 @@ import RegisterScreen from './screen/RegisterScreen';
 import reviewScreen from './screen/ReviewScreen';
 import productosDestacados from './screen/DestacadoProductScreen';
 import ProductsScreen from './screen/ProductsScreen';
-import Axios from 'axios';
+import ShippingScreen from './screen/ShippingScreen';
+import PaymentScreen from './screen/PaymentScreen';
 
-const api = Axios.create({
-    baseURL: "https://picabackenlisto.herokuapp.com"
 
-})
 
 
 function App() {
@@ -80,6 +78,8 @@ function App() {
 
                     <div className="content">
                         <Route path="/products" component={ProductsScreen} />
+                        <Route path="/shipping" component={ShippingScreen} />
+                        <Route path="/payment" component={PaymentScreen} />
                         <Route path="/signin" component={SigninScreen} />
                         <Route path="/register" component={RegisterScreen} />
                         <Route path="/product/:id" component={ProductScreen} />

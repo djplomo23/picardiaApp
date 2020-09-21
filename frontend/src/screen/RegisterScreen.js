@@ -5,7 +5,7 @@ import { register } from '../actions/userAction';
 
 
 
-function SigninScreen(props) {
+function RegisterScreen(props) {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -15,10 +15,12 @@ function SigninScreen(props) {
     const { loading, userInfo, error } = userRegister;
     const dispatch = useDispatch();
 
+    const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+
 
     useEffect(() => {
         if(userInfo) {
-            props.history.push("/");
+            props.history.push(redirect);
         }
         return () => {
             //
@@ -42,7 +44,7 @@ function SigninScreen(props) {
                     <label htmlFor="name">
                         Name
                     </label>
-                    <input type="name" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
                 </li>
                 <li>
                     <label htmlFor="email">
@@ -62,7 +64,8 @@ function SigninScreen(props) {
                     <button type="submit" className="button primary">Register</button>
                 </li>
                 <li>
-                    Already have an Account? <Link to="/signin">Sign-in</Link>
+                    Already have an Account? <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center">Create your Picardia Account</Link>
+               
                 </li>
                
 
@@ -72,4 +75,4 @@ function SigninScreen(props) {
     </div>
 }
 
-export default SigninScreen;
+export default RegisterScreen;
