@@ -6,12 +6,16 @@ const mongoose = require ('mongoose');
 const bodyParser = require ('body-parser');
 const userRoute = require ('./routes/userRoute');
 const productRoute = require ('./routes/productRoute');
+const cors = require('cors');
+
 
 
 
 
 
 dotenv.config();
+
+
 
 
 const PORT = process.env.PORT || 5000;
@@ -24,6 +28,7 @@ mongoose.connect(mongodbUrl, {
 }).catch(error => console.log(error.reason));
 
 const app = express();
+app.use(cors({ origin: true }));
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);

@@ -67,7 +67,12 @@ body::-webkit-scrollbar-track{
   width: 100%;
 }
 .offers img{
-  max-width: 100rem;
+  height: 100vh;
+}
+
+.carousel{
+  width: 100%;
+  height: 100vh;
 }
 
 

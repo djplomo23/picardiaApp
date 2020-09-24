@@ -1,6 +1,6 @@
 const express = require ('express');
 const User = require('../models/userModel');
-const { getToken, isAuth,  } = require ('../util');
+const { getToken,  } = require ('../util');
 
 const router = express.Router();
 
@@ -38,7 +38,6 @@ router.post('/register', async (req, res) => {
             name: newUser.name,
             email: newUser.email,
             isAdmin: newUser.isAdmin,
-            isAuth: newUser.isAuth,
             token: getToken(newUser),
         })
 
