@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/picardiaApp/static/css/main.49fdbdf8.chunk.css",
-    "main.js": "/picardiaApp/static/js/main.6e1f5239.chunk.js",
-    "main.js.map": "/picardiaApp/static/js/main.6e1f5239.chunk.js.map",
+    "main.js": "/picardiaApp/static/js/main.45b5e0e6.chunk.js",
+    "main.js.map": "/picardiaApp/static/js/main.45b5e0e6.chunk.js.map",
     "runtime-main.js": "/picardiaApp/static/js/runtime-main.13d14012.js",
     "runtime-main.js.map": "/picardiaApp/static/js/runtime-main.13d14012.js.map",
     "static/css/2.fb346933.chunk.css": "/picardiaApp/static/css/2.fb346933.chunk.css",
     "static/js/2.ccd0789c.chunk.js": "/picardiaApp/static/js/2.ccd0789c.chunk.js",
     "static/js/2.ccd0789c.chunk.js.map": "/picardiaApp/static/js/2.ccd0789c.chunk.js.map",
     "index.html": "/picardiaApp/index.html",
-    "precache-manifest.4bbf385e3b7a85745734266353f21302.js": "/picardiaApp/precache-manifest.4bbf385e3b7a85745734266353f21302.js",
+    "precache-manifest.b8685110657331851e60cca3f1485524.js": "/picardiaApp/precache-manifest.b8685110657331851e60cca3f1485524.js",
     "service-worker.js": "/picardiaApp/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/picardiaApp/static/css/2.fb346933.chunk.css.map",
     "static/css/main.49fdbdf8.chunk.css.map": "/picardiaApp/static/css/main.49fdbdf8.chunk.css.map",
@@ -29,6 +29,6 @@
     "static/css/2.fb346933.chunk.css",
     "static/js/2.ccd0789c.chunk.js",
     "static/css/main.49fdbdf8.chunk.css",
-    "static/js/main.6e1f5239.chunk.js"
+    "static/js/main.45b5e0e6.chunk.js"
   ]
 }

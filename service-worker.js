@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/picardiaApp/precache-manifest.4bbf385e3b7a85745734266353f21302.js"
+  "/picardiaApp/precache-manifest.b8685110657331851e60cca3f1485524.js"
 );
 
 self.addEventListener('message', (event) => {

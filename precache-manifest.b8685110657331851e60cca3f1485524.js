@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f6380990349ec5cf2d6373b4b5f3d373",
+    "revision": "b6316352b49abaa085733f4eee24b06a",
     "url": "/picardiaApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/picardiaApp/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "6115aad8f6c6be47f897",
+    "revision": "08c97658a0b7b8638030",
     "url": "/picardiaApp/static/css/main.49fdbdf8.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/picardiaApp/static/js/2.ccd0789c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6115aad8f6c6be47f897",
-    "url": "/picardiaApp/static/js/main.6e1f5239.chunk.js"
+    "revision": "08c97658a0b7b8638030",
+    "url": "/picardiaApp/static/js/main.45b5e0e6.chunk.js"
   },
   {
     "revision": "fed6deb75b62dc41c55c",
