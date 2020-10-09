@@ -1,34 +1,31 @@
 {
   "files": {
-    "main.css": "/picardiaApp/static/css/main.49fdbdf8.chunk.css",
-    "main.js": "/picardiaApp/static/js/main.45b5e0e6.chunk.js",
-    "main.js.map": "/picardiaApp/static/js/main.45b5e0e6.chunk.js.map",
+    "main.css": "/picardiaApp/static/css/main.eea8a97a.chunk.css",
+    "main.js": "/picardiaApp/static/js/main.797f7236.chunk.js",
+    "main.js.map": "/picardiaApp/static/js/main.797f7236.chunk.js.map",
     "runtime-main.js": "/picardiaApp/static/js/runtime-main.13d14012.js",
     "runtime-main.js.map": "/picardiaApp/static/js/runtime-main.13d14012.js.map",
     "static/css/2.fb346933.chunk.css": "/picardiaApp/static/css/2.fb346933.chunk.css",
-    "static/js/2.ccd0789c.chunk.js": "/picardiaApp/static/js/2.ccd0789c.chunk.js",
-    "static/js/2.ccd0789c.chunk.js.map": "/picardiaApp/static/js/2.ccd0789c.chunk.js.map",
+    "static/js/2.e375cab6.chunk.js": "/picardiaApp/static/js/2.e375cab6.chunk.js",
+    "static/js/2.e375cab6.chunk.js.map": "/picardiaApp/static/js/2.e375cab6.chunk.js.map",
     "index.html": "/picardiaApp/index.html",
-    "precache-manifest.b8685110657331851e60cca3f1485524.js": "/picardiaApp/precache-manifest.b8685110657331851e60cca3f1485524.js",
+    "precache-manifest.fc5d51118dc04bb4dd82e12b9a89f69e.js": "/picardiaApp/precache-manifest.fc5d51118dc04bb4dd82e12b9a89f69e.js",
     "service-worker.js": "/picardiaApp/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/picardiaApp/static/css/2.fb346933.chunk.css.map",
-    "static/css/main.49fdbdf8.chunk.css.map": "/picardiaApp/static/css/main.49fdbdf8.chunk.css.map",
-    "static/js/2.ccd0789c.chunk.js.LICENSE.txt": "/picardiaApp/static/js/2.ccd0789c.chunk.js.LICENSE.txt",
+    "static/css/main.eea8a97a.chunk.css.map": "/picardiaApp/static/css/main.eea8a97a.chunk.css.map",
+    "static/js/2.e375cab6.chunk.js.LICENSE.txt": "/picardiaApp/static/js/2.e375cab6.chunk.js.LICENSE.txt",
     "static/media/LOGO-PICARDIA--BLANCO.png": "/picardiaApp/static/media/LOGO-PICARDIA--BLANCO.c782774f.png",
     "static/media/LOGO-PICARDIA-NEGRO.png": "/picardiaApp/static/media/LOGO-PICARDIA-NEGRO.d4fd60af.png",
     "static/media/index.css": "/picardiaApp/static/media/LOGO-PICARDIA-Silueta.0446df37.png",
     "static/media/Offer1.png": "/picardiaApp/static/media/Offer1.1735c3c6.png",
     "static/media/esposas.png": "/picardiaApp/static/media/esposas.da0a133b.png",
-    "static/media/f1.png": "/picardiaApp/static/media/f1.5e2b96cd.png",
-    "static/media/f2.jpg": "/picardiaApp/static/media/f2.903b3071.jpg",
-    "static/media/f3.jpg": "/picardiaApp/static/media/f3.4c7c8c2c.jpg",
     "static/media/rostro.jpg": "/picardiaApp/static/media/rostro.61bd2cdf.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.13d14012.js",
     "static/css/2.fb346933.chunk.css",
-    "static/js/2.ccd0789c.chunk.js",
-    "static/css/main.49fdbdf8.chunk.css",
-    "static/js/main.45b5e0e6.chunk.js"
+    "static/js/2.e375cab6.chunk.js",
+    "static/css/main.eea8a97a.chunk.css",
+    "static/js/main.797f7236.chunk.js"
   ]
 }
