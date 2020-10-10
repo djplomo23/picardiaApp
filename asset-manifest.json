@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/picardiaApp/static/css/main.eea8a97a.chunk.css",
-    "main.js": "/picardiaApp/static/js/main.797f7236.chunk.js",
-    "main.js.map": "/picardiaApp/static/js/main.797f7236.chunk.js.map",
+    "main.css": "/picardiaApp/static/css/main.e03b3f87.chunk.css",
+    "main.js": "/picardiaApp/static/js/main.9f08a261.chunk.js",
+    "main.js.map": "/picardiaApp/static/js/main.9f08a261.chunk.js.map",
     "runtime-main.js": "/picardiaApp/static/js/runtime-main.13d14012.js",
     "runtime-main.js.map": "/picardiaApp/static/js/runtime-main.13d14012.js.map",
     "static/css/2.fb346933.chunk.css": "/picardiaApp/static/css/2.fb346933.chunk.css",
     "static/js/2.e375cab6.chunk.js": "/picardiaApp/static/js/2.e375cab6.chunk.js",
     "static/js/2.e375cab6.chunk.js.map": "/picardiaApp/static/js/2.e375cab6.chunk.js.map",
     "index.html": "/picardiaApp/index.html",
-    "precache-manifest.fc5d51118dc04bb4dd82e12b9a89f69e.js": "/picardiaApp/precache-manifest.fc5d51118dc04bb4dd82e12b9a89f69e.js",
+    "precache-manifest.92f5e315ee3a6d322cb808f430b876c4.js": "/picardiaApp/precache-manifest.92f5e315ee3a6d322cb808f430b876c4.js",
     "service-worker.js": "/picardiaApp/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/picardiaApp/static/css/2.fb346933.chunk.css.map",
-    "static/css/main.eea8a97a.chunk.css.map": "/picardiaApp/static/css/main.eea8a97a.chunk.css.map",
+    "static/css/main.e03b3f87.chunk.css.map": "/picardiaApp/static/css/main.e03b3f87.chunk.css.map",
     "static/js/2.e375cab6.chunk.js.LICENSE.txt": "/picardiaApp/static/js/2.e375cab6.chunk.js.LICENSE.txt",
     "static/media/LOGO-PICARDIA--BLANCO.png": "/picardiaApp/static/media/LOGO-PICARDIA--BLANCO.c782774f.png",
     "static/media/LOGO-PICARDIA-NEGRO.png": "/picardiaApp/static/media/LOGO-PICARDIA-NEGRO.d4fd60af.png",
@@ -25,7 +25,7 @@
     "static/js/runtime-main.13d14012.js",
     "static/css/2.fb346933.chunk.css",
     "static/js/2.e375cab6.chunk.js",
-    "static/css/main.eea8a97a.chunk.css",
-    "static/js/main.797f7236.chunk.js"
+    "static/css/main.e03b3f87.chunk.css",
+    "static/js/main.9f08a261.chunk.js"
   ]
 }
