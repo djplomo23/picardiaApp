@@ -39,11 +39,17 @@ body::-webkit-scrollbar-track{
   grid-template-columns: 1fr;
   grid-template-rows: 10rem 1fr 15rem;
   height: 100%;
+  min-width: 100%;
+  
+}
+.headerdisplay{
+  display: none;
+  background-color: #ff8000;
 }
 .header{
   grid-area: header;
   position: fixed;
-  width: 100%;
+  min-width: 100%;
   background-color: #ffffff;
   color: #000000;
   border-bottom: .1rem #c0c0c0 solid;
@@ -73,6 +79,7 @@ body::-webkit-scrollbar-track{
 .carousel{
   width: 100%;
   height: 100vh;
+    
 }
 
 
@@ -98,8 +105,8 @@ body::-webkit-scrollbar-track{
   color: #ff00bf;
 }
 .main{
-  grid-area: main;
- 
+  grid-area: main; 
+  min-width: 100%;
 }
 .footer{
   grid-area: footer;
@@ -466,26 +473,63 @@ a:hover{
 /* Product Details */
 
 .details{
-  display: flex;
+  display: grid;
+  grid-template-areas: 
+  "img info price "
+  "  description ";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 1rem;
+  
+  
 }
+
 .details-image{
-  flex: 2 1 60rem;
- 
+  grid-template: img;
+  
 }
-.details-image img{
-  max-width: 60rem;
-  widows: 100%;
+.detailsContainerimg{
+  display: flex;
+  justify-content: space-evenly;    
+  
+}
+.details-image .imgDetails{
+  position: relative;
+  max-width: 30rem;
+  padding-left: 5rem;
+  
 }
 .details-info{
-  flex: 1 1 30rem;
+  grid-template: info;
+  padding-left: 5rem;
+  
  
 }
+
+.details-description{
+  display: flex  ;
+  grid-template: description;
+  grid-column: 2/3;
+  justify-content: center;
+  text-align: start;
+  max-width: 40rem;
+  
+  
+}
+.smartImg{
+  max-width: 5rem;
+  flex-basis: 16%;
+  cursor: pointer;
+}
+.smartImg img{
+  background: #404040;
+  max-width: 5rem;
+}
 .details-action {
-  flex: 1 2 30rem;
+ grid-template: price;
 }
 
 .details-info ul, .details-action ul{
@@ -634,15 +678,33 @@ a:hover{
 .table{
   width: 100%;
 }
+thead{
+  background: #e84393;
+}
 th{
   text-align: left;
+
+  padding: 1rem;
 }
+
+tr img{
+  padding: 1rem;
+  max-width: 10rem;
+}
+
 td{
+  padding: 1rem;
   text-align: center;
 }
+
 tbody>tr:nth-child(odd){
+  
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
   background-color: #f0f0f0;
 }
+
 
 /* Checkout step */
 
@@ -672,24 +734,182 @@ tbody>tr:nth-child(odd){
     transform: translateX(-100%);
     width: 99.9%;
     height: 100%;
-    
-  
+
   }
   
   .offers img{
-    max-width: 50rem;
+    max-width: 10rem;
+  }
+  .details{
+    display: flex;
+    justify-content: center;
   }
   .details-image {
     display: flex;
     justify-content: center;
   }
   .details-image img{
+    position: relative;
+    left: 0;
     max-width: 30rem;
     widows: 100%;
   }
+  .imgSuperP{
+    max-width: 48rem;
+  }
+  .descrtionSuper{
+    max-width: 48rem;
+  }
+  .superContainer{
+    max-width: 99%;
+    margin: 0 auto;
+  }
+  .callToAction{
+    max-width: 99%;
+    margin: 0 auto;
+
+  }
+  .product{
+    max-width: 80rem;
+  }
+  .product-image{
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+  .details-image .imgDetails{
+    padding-left: 0rem;
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+  .content{
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+  }
+  .details-info{
+    width: 100%;
+  }
+  .details-action{
+    width: 100%;
+  }
+  .details-description{
+    width: 100%;
+  }
+  
   
   .callToActionEmail label{
     display: none;
   }
   
 }
+
+
+/* Dashboard */
+
+.dashboardContainet{
+  width: 100%;
+  height: 100vh;
+  background: #e84393;
+  display: grid;
+  grid-template-areas: 
+  "dashboardHeader dashboardHeader  dashboardHeader"
+  "dashboardSide dashboardBody dashboardBody"
+  "dashboardSide dashboardBody dashboardBody"
+  "dashboardSide dashboardBody dashboardBody";
+  grid-template-columns: 10rem 1fr 1fr;
+  grid-template-rows: 5rem 1fr 15rem;
+}
+.dashboardHeader{
+  grid-area: dashboardHeader ;
+  height: 4rem;
+  width: 100%;
+  background: #f0c040;
+  position: fixed;
+  z-index: 100;
+}
+.dashboardSide{ 
+  
+  grid-area: dashboardSide;
+  width: 20rem;
+  height: 100%;
+  background: #ff8000;
+  position: fixed;
+  top: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+}
+.dasboardTop{
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+.dashboardSide img {
+  max-width: 15rem;
+  
+}
+.dashboardBody{
+  grid-area: dashboardBody;
+}
+.linksDasboard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+}
+.linksDasboard a{
+  margin: 4rem;
+}
+.mainContainetLayout{
+  display: grid;
+  grid-template-areas: 
+  "header header Sleft" 
+  "Sright Scontent Sleft "
+  "footer footer Sleft" 
+  ;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: repeat(1fr);
+}
+.headerLayout{
+  grid-area: header;
+  background: #2d3436;
+}
+.leftNavLayout{
+  grid-area: Sleft;
+  width: 100%;
+  height: 100vh;
+  
+
+ 
+  background: cornflowerblue;
+}
+.rightNavLayout{
+  grid-area: Sright;
+  width: 40%;
+  height: 80%;
+  margin: auto 2rem;
+  background: crimson;
+}
+.mainContentLayout{
+  grid-area: Scontent;
+  grid-column: 2/3;
+  background: darkkhaki;
+  width: auto;  
+  height: 80vh;
+}
+.footerLayout{
+  grid-area: footer;
+}
+.headerLayout h3{
+  color: #000000;
+}
+
+
+.formOffers{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+

@@ -1,4 +1,4 @@
-import { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_FAIL, PRODUCT_SAVE_REQUEST, PRODUCT_SAVE_SUCCESS, PRODUCT_SAVE_FAIL, PRODUCT_DELETE_REQUEST, PRODUCT_DELETE_SUCCESS, PRODUCT_DELETE_FAIL } from '../constants/productConstants';
+import { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_FAIL, PRODUCT_SAVE_REQUEST, PRODUCT_SAVE_SUCCESS, PRODUCT_SAVE_FAIL, PRODUCT_DELETE_REQUEST, PRODUCT_DELETE_SUCCESS, PRODUCT_DELETE_FAIL, PRODUCT_CATEGORY_REQUEST, PRODUCT_CATEGORY_SUCCESS, PRODUCT_CATEGORY_FAIL, PRODUCT_SEARCH_REQUEST, PRODUCT_SEARCH_SUCCESS, PRODUCT_SEARCH_FAIL } from '../constants/productConstants';
 
 function productListReducer(state = { products: [] }, action ) {
 
@@ -8,6 +8,37 @@ function productListReducer(state = { products: [] }, action ) {
         case PRODUCT_LIST_SUCCESS:
             return {loading: false, products: action.payload };
         case PRODUCT_LIST_FAIL:
+            return { loading: true,  error: action.playload}
+        default:
+            return state;
+
+    }
+}
+
+function productSearchReducer(state = { searchs: [] }, action ) {
+
+    switch (action.type) {
+        case PRODUCT_SEARCH_REQUEST:
+            return {loading: true, searchs: []};
+        case PRODUCT_SEARCH_SUCCESS:
+            return {loading: false, searchs: action.payload };
+        case PRODUCT_SEARCH_FAIL:
+            return { loading: true,  error: action.playload}
+        default:
+            return state;
+
+    }
+}
+
+
+function productCategoryReducer(state = { productsCategory: [] }, action ) {
+
+    switch (action.type) {
+        case PRODUCT_CATEGORY_REQUEST:
+            return {loading: true, productsCategory: []};
+        case PRODUCT_CATEGORY_SUCCESS:
+            return {loading: false, productsCategory: action.payload };
+        case PRODUCT_CATEGORY_FAIL:
             return { loading: true,  error: action.playload}
         default:
             return state;
@@ -25,7 +56,7 @@ function productDetailsReducer(state = { product: {} }, action ) {
         case PRODUCT_DETAILS_FAIL:
             return { loading: false, error: action.playload }
         default:
-            return state;
+            return state; 
 
     }
 }
@@ -60,4 +91,4 @@ function productSaveReducer(state = { product: {} }, action ) {
 
     }
 }
-export { productListReducer, productDetailsReducer, productSaveReducer, productDeleteReducer }
+export { productCategoryReducer, productSearchReducer, productListReducer, productDetailsReducer, productSaveReducer, productDeleteReducer }

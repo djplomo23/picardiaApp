@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { saveProduct, listProducts, deleteProduct } from '../actions/productActions';
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic"
+import CKEditor from "@ckeditor/ckeditor5-react"
+
 
 
 
@@ -21,7 +24,7 @@ function ProductsScreen(props) {
     const {
         loading, products, 
         error } = productList;
- 
+        
     const productSave = useSelector((state) => state.productSave);
     const { 
         loading: loadingSave, 
@@ -56,20 +59,30 @@ function ProductsScreen(props) {
         setBrand(product.brand);
         setCategory(product.category);
         setCountInStock(product.countInStock);
+       
+        
         
 
     };
+    
+   
+
+    
 
     const submitHandler = (e) =>{
         e.preventDefault();
+        
+        
         dispatch(
             saveProduct({
-                _id: id, name, 
+            _id: id, name, 
             price, image, brand, category, 
             countInStock, description}));
+          
+           
         
     };
-
+    
     const deleteHandler = (product) =>{
         dispatch(deleteProduct(product._id));
     }
@@ -94,13 +107,12 @@ function ProductsScreen(props) {
                         Name
                     </label>
                     <input type="text" name="name" id="name" 
-                    value={name} onChange={(e) => 
-                    setName(e.target.value)} />
+                    value={name || ''} onChange={(e) => setName(e.target.value)} />
                 </li>
                 <li>
                     <label htmlFor="price">Price</label>
                     <input type="number" id="price" name="price" 
-                    value={price} onChange={(e) => 
+                    value={price || ''} onChange={(e) => 
                     setPrice(e.target.value)} />
                 </li>
                 <li>
@@ -108,7 +120,7 @@ function ProductsScreen(props) {
                         Image
                     </label>
                     <input type="text" name="image" 
-                    value={image} id="image" 
+                    value={image || ''} id="image" 
                     onChange={(e) => setImage(e.target.value)} />
                 </li>
                 <li>
@@ -116,7 +128,7 @@ function ProductsScreen(props) {
                         Brand
                     </label>
                     <input type="text" name="brand" 
-                    id="brand" value={brand} 
+                    id="brand" value={brand || ''} 
                     onChange={(e) => setBrand(e.target.value)} />
                 </li>
                 <li>
@@ -124,7 +136,7 @@ function ProductsScreen(props) {
                     Category
                     </label>
                     <input type="text" name="category" 
-                    id="category" value={category} 
+                    id="category" value={category || ''} 
                     onChange={(e) => setCategory(e.target.value)} />
                 </li>
                 <li>
@@ -132,7 +144,7 @@ function ProductsScreen(props) {
                         stock
                     </label>
                     <input type="text" name="countInStock" 
-                    id="countInStock" value={countInStock} 
+                    id="countInStock" value={countInStock || ''} 
                     onChange={(e) => setCountInStock(e.target.value)} />
                 </li>
                 
@@ -140,10 +152,24 @@ function ProductsScreen(props) {
                     <label htmlFor="description">
                     Description
                     </label>
-                    <textarea name="description" 
-                    id="description" value={description} 
-                    onChange={(e) => setDescription(e.target.value)} />
+                    <CKEditor name="description" 
+                    id="description"
+                    editor={ ClassicEditor }
+                    data={description || ''}
+                    onInit={ editor => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ (e, editor ) => {
+                        const data = editor.getData();
+                        setDescription(data)
+                        console.log( { editor, data } );
+                    } }
+                    
+                /> 
+                   
                 </li>
+                
                 <li>
                     <button type="submit" className="button primary">
                         {id ? 'Update' : 'Create'}</button>
@@ -165,6 +191,7 @@ function ProductsScreen(props) {
             <table className="table">
                 <thead>
                     <tr>
+                        <th>Image</th>
                         <th>ID</th>
                         <th>Name</th>
                         <th>Price</th>
@@ -175,7 +202,8 @@ function ProductsScreen(props) {
                 </thead>
                 <tbody>
                     {products.map((product) => (
-                      <tr key={product._id}>                    
+                      <tr key={product._id}> 
+                        <img src={product.image}/>                 
                         <td>{product._id}</td>                     
                         <td>{product.name}</td>
                         <td>{product.price} RD$</td>
